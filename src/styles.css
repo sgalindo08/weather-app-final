@@ -10,6 +10,7 @@ h1 {
   margin: 0;
 }
 li {
+  text-transform: capitalize;
   color: #5a5d60;
   font-size: 18px;
   line-height: 30px;
@@ -20,17 +21,17 @@ ul {
   margin: 0 0 20px;
 }
 p {
-  font-weight: bold;
   color: white;
   font-size: 18px;
   text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 a {
-  color: #84aa55;
+  color: #b4c98b;
   text-decoration: none;
 }
 a:hover {
-  color: #40546e;
+  color: #a4b680;
   text-decoration: none;
   cursor: pointer;
 }
