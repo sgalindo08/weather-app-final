@@ -1,24 +1,29 @@
-let now = new Date();
-let hours = now.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
-}
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
 
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday",
-];
-let day = days[now.getDay()];
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  let day = days[date.getDay()];
+
+  return `${day} ${hours}:${minutes}`;
+}
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -29,7 +34,7 @@ function formatDay(timestamp) {
 }
 
 let currentTime = document.querySelector("#current-time");
-currentTime.innerHTML = `${day} ${hours}:${minutes}`;
+currentTime.innerHTML = formatDate(new Date());
 
 function displayForecast(response) {
   let forecast = response.data.daily;
@@ -74,6 +79,8 @@ function displayWeatherCondition(response) {
   celsiusTemperature = response.data.temperature.current;
   console.log(response.data);
 
+  document.querySelector("#current-time");
+  currentTime.innerHTML = formatDate(response.data.time * 1000);
   document.querySelector("#city").innerHTML = response.data.city;
   document.querySelector("#temperature").innerHTML =
     Math.round(celsiusTemperature);
