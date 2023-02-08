@@ -1,3 +1,14 @@
+function changeTheme() {
+  let body = document.querySelector("body");
+  if (body.classList.contains("dark")) {
+    body.classList.remove("dark");
+  } else {
+    body.classList.remove.add("dark");
+  }
+}
+let themeButton = document.querySelector(".theme-button");
+themeButton.addEventListener("click", changeTheme);
+
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
