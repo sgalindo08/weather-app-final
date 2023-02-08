@@ -31,9 +31,28 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #9eb373;
+  color: #b9d187;
   text-decoration: none;
   cursor: pointer;
+}
+.theme-button {
+  font-size: 17px;
+  background: #9eb373;
+  color: rgb(255, 255, 255);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -2px black;
+  padding: 5 8px;
+}
+.theme-button:hover {
+  color: #202124;
+  background: white;
+}
+.dark {
+  background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/618/original/final.png?1674792842);
+  background-size: cover;
+  color: blue;
+}
+.dark .container {
+  background: grey;
 }
 .container {
   max-width: 700px;
