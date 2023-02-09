@@ -3,7 +3,7 @@ function changeTheme() {
   if (body.classList.contains("dark")) {
     body.classList.remove("dark");
   } else {
-    body.classList.remove.add("dark");
+    body.classList.add("dark");
   }
 }
 let themeButton = document.querySelector(".theme-button");

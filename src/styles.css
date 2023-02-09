@@ -1,3 +1,33 @@
+body {
+  background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/066/601/original/weather-cover.png?1675897492);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Audiowide", cursive;
+}
+h1 {
+  color: #4c5057;
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0;
+}
+li {
+  text-transform: capitalize;
+  color: #3e3f45;
+  font-size: 18px;
+  line-height: 30px;
+  list-style: none;
+  opacity: 0.6;
+}
+ul {
+  padding: 0;
+  margin: 0 0 20px;
+}
+p {
+  color: rgb(209, 201, 201);
+  font-size: 18px;
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 button {
   display: block;
   margin: 0 auto;
@@ -7,62 +37,56 @@ button {
   border-radius: 7px;
   padding: 8px 7px;
 }
-body {
-  background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/066/601/original/weather-cover.png?1675897492);
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: "Audiowide", cursive;
-}
-h1 {
-  color: #202124;
-  font-size: 25px;
-  line-height: 25px;
-  margin: 0;
-}
-li {
-  text-transform: capitalize;
-  color: #5a5d60;
-  font-size: 18px;
-  line-height: 30px;
-  list-style: none;
-}
-ul {
-  padding: 0;
-  margin: 0 0 20px;
-}
-p {
-  color: white;
-  font-size: 18px;
-  text-align: center;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
 a {
   color: #dfb09c;
   text-decoration: none;
+}
+.dark a {
+  color: #88a785;
 }
 a:hover {
   color: #d3967c;
   text-decoration: none;
   cursor: pointer;
 }
+.dark a:hover {
+  color: #678964;
+  text-decoration: none;
+}
 .theme-button {
+  margin-top: 10px;
   font-size: 15px;
   background: #9eb373;
   color: rgb(255, 255, 255);
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -2px black;
   padding: 10px 8px;
 }
+.dark .theme-button {
+  background: #4c4538;
+  color: rgb(219, 217, 217);
+}
 .theme-button:hover {
-  color: rgb(192, 192, 192);
+  color: rgb(219, 217, 217);
+  background: rgb(27, 26, 26);
+}
+.dark .theme-button:hover {
   background: white;
+  color: black;
+  color: rgb(219, 217, 217);
+}
+.dark h1 {
+  color: rgb(226, 199, 147);
+}
+.dark li {
+  color: rgb(226, 199, 147);
+  opacity: 0.7;
+}
+.dark p {
+  color: rgb(226, 199, 147);
 }
 .dark {
   background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/618/original/final.png?1674792842);
   background-size: cover;
-  color: blue;
-}
-.dark .container {
-  background: grey;
 }
 .container {
   max-width: 700px;
@@ -70,9 +94,14 @@ a:hover {
   background: #e0c99e;
   opacity: 0.9;
   padding: 10px;
-  box-shadow: rgba(100, 100, 111, 0.9) 0px 7px 29px 0px;
+  box-shadow: rgba(235, 152, 170, 0.9) 0px 7px 29px 0px;
   border: 4px solid #cab389;
   border-radius: 10px;
+}
+.dark .container {
+  background: grey;
+  border: 4px solid #cab389;
+  box-shadow: rgb(91, 67, 67) 0px 7px 29px 0px;
 }
 .weather-app {
   padding: 15px;
@@ -80,14 +109,21 @@ a:hover {
   border-radius: 10px;
 }
 .temperature {
-  color: rgb(33, 33, 33);
+  color: #4c5057;
   font-size: 65px;
   font-weight: 400;
   line-height: 1;
 }
+.dark .temperature {
+  color: rgb(226, 199, 147);
+}
 .units {
+  color: #4c5057;
   position: relative;
   top: -34px;
+}
+.dark .units {
+  color: rgb(226, 199, 147);
 }
 .weather-icon {
   position: relative;
@@ -109,15 +145,27 @@ a:hover {
   text-decoration: none;
 }
 .weather-forecast {
+  color: #4c5057;
   margin-top: 5px;
   text-align: center;
 }
+.dark .weather-forecast-date {
+  color: rgb(226, 199, 147);
+}
 .weather-forecast-date {
+  color: #44474d;
   font-size: 18px;
+}
+.dark .weather-forecast-temperature-min {
+  color: rgb(226, 199, 147);
 }
 .weather-forecast-temperature-min {
   opacity: 0.6;
 }
+.dark .weather-forecast-temperatures {
+  color: rgb(226, 199, 147);
+}
 .weather-forecast-temperatures {
+  color: #4c5057;
   font-size: 16px;
 }
