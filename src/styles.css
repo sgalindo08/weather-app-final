@@ -1,6 +1,5 @@
 body {
   background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/066/601/original/weather-cover.png?1675897492);
-  background-repeat: no-repeat;
   background-size: cover;
   font-family: "Audiowide", cursive;
 }
